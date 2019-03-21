@@ -41,12 +41,12 @@
   /* opacity: 0.9; */
 }
 
-.jumbotron .container {
+.jumbotron .container-fluid {
   z-index: 2;
   position: relative;
 }
 
-.jumbotron .container h1 {
+.jumbotron .container-fluid h1 {
   font-size: 5rem;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
