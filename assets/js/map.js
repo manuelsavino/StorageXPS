@@ -383,6 +383,7 @@ function initMap() {
     this[name] = new google.maps.Marker({
       position: location,
       map: map,
+      animation: google.maps.Animation.DROP,
       icon: "./assets/images/flag.png",
       title: title
     });
@@ -402,6 +403,13 @@ function initMap() {
     return each.addListener("click", function() {
       windows[i].open(map, each);
     });
+  });
+
+  google.maps.event.addListener(map, "click", function(event) {
+    for (var i = 0; i < ibArray.length; i++) {
+      //I assume you have your infoboxes in some array
+      windo[i].close();
+    }
   });
 }
 
