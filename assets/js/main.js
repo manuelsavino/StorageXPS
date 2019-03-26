@@ -1,5 +1,4 @@
 $(function() {
-
   $("#fileInput").bind("change", function() {
     //this.files[0].size gets the size of your file.
     if (this.files[0].size > 20971520) {

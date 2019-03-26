@@ -52,25 +52,6 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.typed {
-  color: white;
-  position: absolute;
-  bottom: 2rem;
-  font-size: 7rem;
-}
-
-.typed img {
-  /* width: 30rem; */
-  padding-bottom: 2rem;
-}
-
-.typed-cursor {
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  font-size: 7rem;
-  font-weight: 600;
-}
-
 .bg-yellow {
   background: #f7ee24;
 }
