@@ -406,9 +406,8 @@ function initMap() {
   });
 
   google.maps.event.addListener(map, "click", function(event) {
-    for (var i = 0; i < ibArray.length; i++) {
-      //I assume you have your infoboxes in some array
-      windo[i].close();
+    for (var i = 0; i < windows.length; i++) {
+      windows[i].close();
     }
   });
 }
