@@ -1,36 +1,39 @@
 var map;
-var miami = { lat: 37.0902, lng: -95.7129 };
-
-var locations = [
+var center = { lat: 37.0902, lng: -95.7129 };
+let locations = [
   {
     location: { lat: 37.0902, lng: -95.7129 },
     name: "Self Storage Multi Story | Kansas",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, repellendus!"
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, repellendus!",
+    pics: [`150X100`, `150X100`, `150X100`]
   },
   {
     location: { lat: 25.7617, lng: -80.1918 },
     name: "Hallway System | Miami, Fl",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat rutrum lacus, at condimentum lectus."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat rutrum lacus, at condimentum lectus.",
+    pics: [`150X100`, `150X100`]
   },
   {
     location: { lat: 28.5383, lng: -81.3792 },
     name: "Hallway System | Orlando, Fl",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus enim inventore maiores neque quia fugit eum cupiditate sint fuga."
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus enim inventore maiores neque quia fugit eum cupiditate sint fuga.",
+    pics: [`150X100`]
   },
   {
     location: { lat: 47.6062, lng: -122.3321 },
     name: "Single Story | Seattle, Washington",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat rutrum lacus, at condimentum lectus."
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat rutrum lacus, at condimentum lectus.",
+    pics: [`150X100`, `150X100`, `150X100`]
   }
 ];
 
 var mapOptions = {
   zoom: 4,
-  center: miami,
+  center: center,
   disableDefaultUI: true,
   gestureHandling: "greedy",
   styles: [
@@ -369,13 +372,10 @@ var mapOptions = {
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  var infowindow = new google.maps.InfoWindow({
-    content: getContent()
-  });
-
-  function createInfoWindows(name, description) {
+  function createInfoWindows(name, description, pics) {
+    // console.log(pics);
     return (this[name] = new google.maps.InfoWindow({
-      content: getContent(name, description)
+      content: getContent(name, description, pics)
     }));
   }
 
@@ -390,20 +390,24 @@ function initMap() {
     return this[name];
   }
 
-  const all = locations.map(one => {
-    return createMarkers(one.location, one.name, one.name);
-  });
-
   const windows = locations.map(each => {
-    return createInfoWindows(each.name, each.description);
+    return createInfoWindows(each.name, each.description, each.pics);
   });
 
-  all.map((each, i) => {
-    console.log(each);
-    return each.addListener("click", function() {
-      windows[i].open(map, each);
+  setTimeout(() => {
+    let all = locations.map(one => {
+      return createMarkers(one.location, one.name, one.name);
     });
-  });
+
+    all.map((each, i) => {
+      return each.addListener("click", function() {
+        for (var j = 0; j < windows.length; j++) {
+          windows[j].close();
+        }
+        windows[i].open(map, each);
+      });
+    });
+  }, 1500);
 
   google.maps.event.addListener(map, "click", function(event) {
     for (var i = 0; i < windows.length; i++) {
@@ -412,17 +416,23 @@ function initMap() {
   });
 }
 
-function getContent(name, description, link) {
+function getContent(name, description, pics) {
+  let img = pics.map(pic => {
+    return `<img src="https://place-hold.it/${pic}">`;
+  });
+
   var contentString = `<div id="content">
     <div id="siteNotice">
     </div>
     <h1 id="firstHeading" class="firstHeading">${name}</h1>
     <div id="bodyContent">
     <p>${description}</p>
-    <img src="https://place-hold.it/150X100">
-    <img src="https://place-hold.it/150X100">
-    <img src="https://place-hold.it/150X100">
-
+    <div>
+      ${img
+        .toString()
+        .split(",")
+        .join("")}
+    </div>
     </div>
     </div>`;
   return contentString;
