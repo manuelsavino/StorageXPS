@@ -1,5 +1,5 @@
 var map;
-var center = { lat: 33.8361, lng: -81.1637 };
+var center = { lat: 35.7596, lng: -79.0193 };
 let locations = [
   {
     location: { lat: 26.136426, lng: -80.211402 },
@@ -44,7 +44,7 @@ let locations = [
 ];
 
 var mapOptions = {
-  zoom: 5,
+  zoom: 4,
   center: center,
   disableDefaultUI: true,
   // gestureHandling: "greedy",
@@ -396,7 +396,7 @@ function initMap() {
       position: location,
       map: map,
       animation: google.maps.Animation.DROP,
-      icon: "./assets/images/flag.png",
+      icon: "./assets/images/flag_.png",
       title: title
     });
     return this[name];
@@ -416,8 +416,8 @@ function initMap() {
       styles: [
         {
           url: "https://googlemaps.github.io/js-marker-clusterer/images/m2.png",
-          width: 50,
-          height: 50,
+          width: 55,
+          height: 55,
           textSize: 10
           //color: #00FF00,
         }
