@@ -2,32 +2,44 @@ var map;
 var center = { lat: 37.0902, lng: -95.7129 };
 let locations = [
   {
-    location: { lat: 37.0902, lng: -95.7129 },
-    name: "Self Storage Multi Story | Kansas",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, repellendus!",
-    pics: [`150X100`, `150X100`, `150X100`]
+    location: { lat: 26.136426, lng: -80.211402 },
+    name: "Extra Space | Plantation, FL",
+    description: `<strong>Sq Ft: </strong>10000<br/>
+    <strong>Total Units: </strong>200
+      `,
+    pics: [`plantation.jpg`]
   },
   {
-    location: { lat: 25.7617, lng: -80.1918 },
-    name: "Hallway System | Miami, Fl",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat rutrum lacus, at condimentum lectus.",
-    pics: [`150X100`, `150X100`]
+    location: { lat: 39.864653, lng: -75.34641 },
+    name: "Extra Space | Crum Lynne, PA",
+    description: `<strong>Sq Ft: </strong>10000<br/>
+    <strong>Total Units: </strong>200
+      `,
+    pics: [`crumLynne.jpg`]
   },
   {
-    location: { lat: 28.5383, lng: -81.3792 },
-    name: "Hallway System | Orlando, Fl",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus enim inventore maiores neque quia fugit eum cupiditate sint fuga.",
-    pics: [`150X100`]
+    location: { lat: 42.305542, lng: -71.109942 },
+    name: "Extra Space | Jamaica Plain, MA",
+    description: `<strong>Sq Ft: </strong>10000<br/>
+    <strong>Total Units: </strong>200
+      `,
+    pics: [`jamaicaPlain.jpg`]
   },
   {
-    location: { lat: 47.6062, lng: -122.3321 },
-    name: "Single Story | Seattle, Washington",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat rutrum lacus, at condimentum lectus.",
-    pics: [`150X100`, `150X100`, `150X100`]
+    location: { lat: 26.050405, lng: -80.251054 },
+    name: "CubeSmart | Davie,FL",
+    description: `<strong>Sq Ft: </strong>10000<br/>
+    <strong>Total Units: </strong>200
+      `,
+    pics: [`davieFL.jpg`]
+  },
+  {
+    location: { lat: 27.345016, lng: -80.327999 },
+    name: "End User? | Port St. Lucie",
+    description: `<strong>Sq Ft: </strong>10000<br/>
+    <strong>Total Units: </strong>200
+      `,
+    pics: [`stLucie.jpg`]
   }
 ];
 
@@ -418,7 +430,7 @@ function initMap() {
 
 function getContent(name, description, pics) {
   let img = pics.map(pic => {
-    return `<img src="https://place-hold.it/${pic}">`;
+    return `<img src="./assets/images/${pic}">`;
   });
 
   var contentString = `<div id="content">
