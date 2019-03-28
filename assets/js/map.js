@@ -1,5 +1,5 @@
 var map;
-var center = { lat: 37.0902, lng: -95.7129 };
+var center = { lat: 33.8361, lng: -81.1637 };
 let locations = [
   {
     location: { lat: 26.136426, lng: -80.211402 },
@@ -44,7 +44,7 @@ let locations = [
 ];
 
 var mapOptions = {
-  zoom: 4,
+  zoom: 5,
   center: center,
   disableDefaultUI: true,
   // gestureHandling: "greedy",
@@ -409,7 +409,21 @@ function initMap() {
   setTimeout(() => {
     let all = locations.map(one => {
       return createMarkers(one.location, one.name, one.name);
-    });
+    }, 1000);
+
+    var mcOptions = {
+      //imagePath: 'https://googlemaps.github.io/js-marker-clusterer/images/m',
+      styles: [
+        {
+          url: "https://googlemaps.github.io/js-marker-clusterer/images/m2.png",
+          width: 50,
+          height: 50,
+          textSize: 10
+          //color: #00FF00,
+        }
+      ]
+    };
+    var markerCluster = new MarkerClusterer(map, all, mcOptions);
 
     all.map((each, i) => {
       return each.addListener("click", function() {
