@@ -10,15 +10,15 @@ body {
   /* background-image: url("../images/coverBg.jpg"); */
   /* background-color: #419be0; */
   /* background-size: cover; */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
   height: 70vh;
   font-family: "Open Sans", sans-serif;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
 }
 
-.cover:before {
+/* .cover:before {
   content: "";
   position: absolute;
   top: 0;
@@ -26,7 +26,7 @@ body {
   left: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.4);
-}
+} */
 
 .jumbotron {
   position: relative;
@@ -102,6 +102,15 @@ a:hover {
 
 section {
   padding: 60px 0;
+}
+
+.linkToMap {
+  transition: all 0.5s;
+}
+
+.linkToMap:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 #footer {

@@ -47,7 +47,7 @@ var mapOptions = {
   zoom: 4,
   center: center,
   disableDefaultUI: true,
-  gestureHandling: "greedy",
+  // gestureHandling: "greedy",
   styles: [
     {
       featureType: "all",
