@@ -40,7 +40,9 @@ $(function() {
       success: function(r) {
         console.log("result", r);
         $(".holder").empty();
-        $(".holder").append("<h2>Thank you, we will contact you soon!</h2>");
+        $(".holder").append(
+          `<h2 class="p-3">Thank you, we will contact you soon!</h2>`
+        );
       },
       error: function(e) {
         console.log("some error", e);
