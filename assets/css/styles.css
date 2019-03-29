@@ -31,8 +31,8 @@ body {
 .jumbotron {
   position: relative;
   overflow: hidden;
-  height: 400px;
-  background-color: black;
+  /* height: 400px; */
+  /* background-color: black; */
 }
 .jumbotron video {
   position: absolute;
@@ -53,7 +53,8 @@ body {
 .jumbotron .container-fluid h1 {
   font-size: 5rem;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
+  color: #f7ee24;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .bg-yellow {
@@ -81,18 +82,33 @@ a:hover {
   text-decoration: none;
 }
 
+.container::before {
+  display: block;
+  width: 9999px;
+  position: absolute;
+  right: 85%;
+  top: 0;
+  background-image: url("../images/blue-connection-texture.png");
+}
+
+.card:hover {
+  color: #f6ec40;
+  background: #232b2b;
+}
 .card .reveal {
   visibility: hidden;
   opacity: 0;
   height: 0;
   padding: 0;
+  color: #f6ec40;
 }
 
 .card:hover .reveal {
   height: auto;
   visibility: visible;
   opacity: 10;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
+  color: #f6ec40;
 }
 
 .map {
@@ -105,11 +121,11 @@ section {
 }
 
 .linkToMap {
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .linkToMap:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   cursor: pointer;
 }
 
@@ -174,10 +190,4 @@ section {
     padding-bottom: 0px;
     margin-bottom: 10px;
   }
-}
-
-.single-item {
-  text-align: center;
-  color: #419be0;
-  background: white;
 }
