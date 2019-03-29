@@ -65,24 +65,33 @@
             </div>
             <div class="col-md-4">
                 <h2>Contact Us</h2>
-                <div class="border p-4">
-                        <form>
-                                <div class="form-group">
-                                    <lahbel for="exampleFormControlSelect1">Name</lahbel>
-                                    <input type="text" class="form-control"  id="name"
-                                        placeholder="Joe Doe">
+                <div class="border">
+                        <form class="mx-auto w-100 p-3" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="" for="exampleInputEmail1">Name</label>
+                                <input type="text" class="form-control" name="email" id="name" placeholder="Enter Name" />
+                            </div>
+                            <div class="form-group">
+                                    <label class="" for="exampleInputEmail1">Phone</label>
+                                    <input type="text" class="form-control" name="text" id="phone" placeholder="Enter Phone Number" />
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Email address</label>
-                                    <input type="email" class="form-control" id="email"
-                                        placeholder="name@example.com">
-                                </div>
-                                <div class="form-group">
+                            <div class="form-group">
+                                <label class="" for="exampleInputEmail1">Email address</label>
+                                <input type="email" id="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email" />
+                            </div>
+                            <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" id="message" rows="3"></textarea>
                                 </div>
-                                <button type="submit" class="submit btn bg-yellow">Submit</button>
-                            </form>
+            
+                            <div class="form-group">
+                                <label class="" for="exampleFormControlFile1">Atachment (Max File Size: 20MB)</label>
+                                <input type="file" class="form-control-file" id="fileInput" />
+                            </div>
+            
+                            <button class="submit btn bg-yellow">Submit</button>
+                        </form>
                 </div>
 
             </div>
@@ -143,7 +152,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

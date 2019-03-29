@@ -3,11 +3,6 @@ body {
   background: #0e1111;
 }
 
-.dotted {
-  background: rgba(0, 0, 0, 0.5)
-    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAF0lEQVQIW2NkYGD4z8DAwMgAI0AMDA4AI3EBBCKrOnQAAAAASUVORK5CYII=");
-}
-
 .yellowBg {
   background: #f7ee24;
   color: black;
