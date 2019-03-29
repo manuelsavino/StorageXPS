@@ -2,26 +2,34 @@ var map;
 var center = { lat: 35.7596, lng: -79.0193 };
 let locations = [
   {
+    location: { lat: 25.847816, lng: -80.176044 },
+    name: "Extra Space | Miami Beach, FL",
+    description: `<strong>Sq Ft: </strong>136,200<br/>
+    <strong>Total Units: </strong>1025
+      `,
+    pics: [`belaire.jpg`]
+  },
+  {
     location: { lat: 26.136426, lng: -80.211402 },
     name: "Extra Space | Plantation, FL",
-    description: `<strong>Sq Ft: </strong>10000<br/>
-    <strong>Total Units: </strong>200
+    description: `<strong>Sq Ft: </strong>107,559<br/>
+    <strong>Total Units: </strong>862
       `,
     pics: [`plantation.jpg`]
   },
   {
     location: { lat: 39.864653, lng: -75.34641 },
     name: "Extra Space | Crum Lynne, PA",
-    description: `<strong>Sq Ft: </strong>10000<br/>
-    <strong>Total Units: </strong>200
+    description: `<strong>Sq Ft: </strong>110,000<br/>
+    <strong>Total Units: </strong>931
       `,
     pics: [`crumLynne.jpg`]
   },
   {
     location: { lat: 42.305542, lng: -71.109942 },
     name: "Extra Space | Jamaica Plain, MA",
-    description: `<strong>Sq Ft: </strong>10000<br/>
-    <strong>Total Units: </strong>200
+    description: `<strong>Sq Ft: </strong>133,740<br/>
+    <strong>Total Units: </strong>1168
       `,
     pics: [`jamaicaPlain.jpg`]
   },
@@ -29,14 +37,14 @@ let locations = [
     location: { lat: 26.050405, lng: -80.251054 },
     name: "CubeSmart | Davie,FL",
     description: `<strong>Sq Ft: </strong>10000<br/>
-    <strong>Total Units: </strong>200
+    <strong>Total Units: </strong>766
       `,
     pics: [`davieFL.jpg`]
   },
   {
     location: { lat: 27.345016, lng: -80.327999 },
-    name: "End User? | Port St. Lucie",
-    description: `<strong>Sq Ft: </strong>10000<br/>
+    name: "Advantage Self Storage | Port St. Lucie",
+    description: `<strong>Sq Ft: </strong>99,512<br/>
     <strong>Total Units: </strong>200
       `,
     pics: [`stLucie.jpg`]
