@@ -12,6 +12,7 @@ $(function() {
 
     let email = $("#email").val();
     let name = $("#name").val();
+    let message = $("#message").val();
     let input = document.getElementById("fileInput");
     let files = input.files[0];
 
@@ -19,6 +20,7 @@ $(function() {
 
     data.append("Name", name);
     data.append("Email", email);
+    data.append("Message", message);
     data.append("Attachment", files);
 
     $(".holder").empty();
