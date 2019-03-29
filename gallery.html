@@ -9,6 +9,7 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>StorageXPS</title>
 </head>
@@ -55,7 +56,29 @@
     </nav>
     </div>
     <div class="container my-3">
-        <h1>Gallery</h1>
+        <h1 class="mb-4">Gallery</h1>
+        <div class="row my-4 mx-5">
+            <a href="./assets/images/gallery/1.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="./assets/images/gallery/1.JPG" class="img-fluid rounded">
+            </a>
+            <a href="./assets/images/gallery/2.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="./assets/images/gallery/2.JPG" class="img-fluid rounded">
+            </a>
+            <a href="./assets/images/gallery/3.jpeg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="./assets/images/gallery/3.jpeg" class="img-fluid rounded">
+            </a>
+        </div>
+        <div class="row my-4 mx-5">
+            <a href="./assets/images/gallery/4.jpeg" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="./assets/images/gallery/4.jpeg" class="img-fluid rounded">
+            </a>
+            <a href="./assets/images/gallery/5.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="./assets/images/gallery/5.JPG" class="img-fluid rounded">
+            </a>
+            <a href="./assets/images/gallery/6.JPG" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
+                <img src="./assets/images/gallery/6.JPG" class="img-fluid rounded">
+            </a>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -98,17 +121,17 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                  <p class="h6 text-dark">&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> StorageXPS. All right Reversed. </p>
+                    <p class="h6 text-dark">&copy;
+                        <script>new Date().getFullYear() > 2010 && document.write(new Date().getFullYear());</script>
+                        StorageXPS. All right Reversed. </p>
                 </div>
                 </hr>
             </div>
         </div>
     </section>
     <!-- ./Footer -->
-   <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
         integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
         crossorigin="anonymous"></script>
@@ -116,6 +139,12 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.js"></script>
+    <script>
+        $(document).on("click", '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });</script>
 </body>
 
 </html>
